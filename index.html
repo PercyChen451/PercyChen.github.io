@@ -7,162 +7,335 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
+            background: #f8f9fa;
+        }
+        .intro {
+            background: white;
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            border-left: 5px solid #2c3e50;
         }
         .project {
-            background: #f5f5f5;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .project-title {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .project-subtitle {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin: 5px 0 15px 0;
+        }
+        .project-duration {
+            background: #34495e;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
         }
         .media-container {
             text-align: center;
-            margin: 20px 0;
+            margin: 25px 0;
         }
         img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 5px;
         }
-        video {
-            max-width: 100%;
+        .responsibilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .responsibility-card {
+            background: #f8f9fa;
+            padding: 15px;
             border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        .tech-tag {
+            background: #3498db;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
         }
         a {
             color: #0366d6;
             text-decoration: none;
+            font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
         }
+        .achievement-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+        .section-divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #3498db, transparent);
+            margin: 40px 0;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <!-- Introduction Section -->
+    <section class="intro">
         <h1>👋 Hi, I'm Percy Chen</h1>
-        <p>Welcome to my project showcase!</p>
-    </header>
+        <p style="font-size: 1.2em; color: #2c3e50; margin-bottom: 20px;">
+            Aerospace Electronics & Embedded Systems Engineer
+        </p>
+        <p style="color: #7f8c8d; max-width: 600px; margin: 0 auto;">
+            Passionate about rocket avionics, embedded systems, and cutting-edge robotics. 
+            Currently leading avionics development for high-altitude rockets and researching 
+            surgical robotics at Boston University.
+        </p>
+    </section>
 
+    <hr class="section-divider">
+
+    <!-- Icarus Project -->
     <section class="project">
-        <h2>🚀Bipropellant rocket Icarus@BURPG 2023.11 ~ 2025.3 </h2>
-        
-        <!-- Image Example -->
-        <div class="media-container">
-            <h3>📸 Photo</h3>
-            <img src="IMG_6588.JPG" alt="Project 1 Screenshot" width="400">
-            <img src="GroupPhoto.JPG" alt="Project 1 Screenshot" width="400">
-            <p><em>Icarus</em></p>
+        <div class="project-header">
+            <div>
+                <h2 class="project-title">🚀 Icarus - Liquid Bipropellant Rocket</h2>
+                <p class="project-subtitle">Boston University Rocket Propulsion Group (BURPG)</p>
+            </div>
+            <div class="project-duration">2023.11 - 2025.3</div>
         </div>
 
-        <!-- Video Example -->
+        <div class="media-container">
+            <img src="IMG_6588.JPG" alt="Icarus Rocket" width="400">
+            <img src="GroupPhoto.JPG" alt="Team Photo" width="400">
+            <p><em>Icarus Rocket & Team</em></p>
+        </div>
+
         <div class="media-container">
             <h3>🎥 Launch Video</h3>
-            <!-- YouTube Embed -->
             <iframe width="560" height="315" 
-                    src="https://youtu.be/vnxtU_Yg_ek?si=zENWsmLVR8DaiayS" 
+                    src="https://www.youtube.com/embed/vnxtU_Yg_ek" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
             </iframe>
-            <p>Or <a href="https://youtu.be/vnxtU_Yg_ek?si=zENWsmLVR8DaiayS">watch on YouTube</a></p>
+            <p>Or <a href="https://youtu.be/vnxtU_Yg_ek?si=zENWsmLVR8DaiayS" target="_blank">watch on YouTube</a></p>
         </div>
 
-        <p>First liquid bipropellant rocket BURPG, 13k feet apogee with take-off thrust of ~2200 lbs(world record for collegiate rocket take-off thrust), fully recovered with our recovery system
-I worked on the PCB controller for Ground system, Ground System integration, Separation and Recovery’s electrical system, Firmware using Freertos, WebGui (Shown below) and Field test op(As Red team member)
-BU News link </p>
+        <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ffc107;">
+            <h4 style="margin: 0 0 10px 0;">🏆 Mission Achievements</h4>
+            <ul style="margin: 0;">
+                <li><strong>13,000 feet</strong> apogee</li>
+                <li><strong>~2,200 lbs</strong> take-off thrust <span class="achievement-badge">World Record</span></li>
+                <li>First successful liquid bipropellant rocket in BURPG</li>
+                <li>Fully recovered with custom recovery system</li>
+            </ul>
+        </div>
+
+        <h3>🔧 My Contributions</h3>
+        <div class="responsibilities-grid">
+            <div class="responsibility-card">
+                <strong>PCB Controller</strong> - Ground system electronics
+            </div>
+            <div class="responsibility-card">
+                <strong>System Integration</strong> - Ground support systems
+            </div>
+            <div class="responsibility-card">
+                <strong>Recovery Systems</strong> - Separation & electrical systems
+            </div>
+            <div class="responsibility-card">
+                <strong>Firmware</strong> - FreeRTOS implementation
+            </div>
+            <div class="responsibility-card">
+                <strong>Web GUI</strong> - Full-stack interface
+            </div>
+            <div class="responsibility-card">
+                <strong>Field Operations</strong> - Red Team member
+            </div>
+        </div>
     </section>
-     <section class="project">
-        <h2>🚀 Argo @BURPG 2025.4 ~ Now</h2>
-        
-        <!-- Multiple Images -->
-        <div class="media-container">
-            <img src="FCREV1.png" alt="View 1" width="400">
-            <img src="FCREV1_dES.png" alt="2 View 2" width="400">
-        </div>
 
-        </div>
-                 <p>
-                 Argo is Boston University Rocket Propulsion Group’s (BURPG) flagship high-altitude vehicle designed to reach 100,000 ft following the success of Icarus. With a dry mass of 135 lbm and an 8-inch outer diameter, Argo represents a significant leap in collegiate aerospace engineering.
-                 A key innovation in Argo is its closed-loop controlled COPV (Composite Overwrapped Pressure Vessel) system integrated into the fuel line. This advanced control architecture actively regulates propellant tank pressure in real-time
-                     I'm the Engineering leader & Avionic team leader for this project, I designed the avionic system for argo and I’m currently leading the design for one of the  Flight Computer PCB,  a 4 layer PCB with a STM32H743, BMS, Protection circuit(Efuse and Fuse), Ethernet switch, 2 different Load Switches (Full Bridge Driver and Constant current solenoid driver), Onboard sensing, Delta-Sigma ADC, CAN bus, IMU and Altimeter. 
-                 </p>
-
-         
-    </section>
+    <!-- Argo Project -->
     <section class="project">
-        <h2>🚀 Daedalus Controller @BURPG 2023.11 ~ 2025.2</h2>
-        
-        <!-- Multiple Images -->
-        <div class="media-container">
-            <img src="DLrev2_testing.jpg" alt="Project 2 View 1" width="400">
-            <img src="GSE.JPG" alt="Project 2 View 2" width="400">
-        </div>
-                <p>Daedalus (Ground Support System Name of Icarus) handles important operation procedure such as Propellant loading, Data acquisition, Engine Ignition and Vehicle Main Valve Control. 
-I owned the full-stack development process. This encompassed circuit simulation (LTspice/PSpice), schematic capture, 4 layers PCB layout (Altium Designer), validation through two formal design reviews and integration to our firmware and GUI, culminating in a multi-purposes controller deployed for launch operations.k </p>
-    </section>
-     <section class="project">
-        <h2>🤖 Surgical robot research @Morphable Biorobotics Lab</h2>
-        
-        <!-- Multiple Images -->
-        <div class="media-container">
-            <img src="SRfigure.png" alt="Project 2 View 1" width="400">
-            <img src="Tracking.png" alt="Project 2 View 2" width="400">
+        <div class="project-header">
+            <div>
+                <h2 class="project-title">🚀 Argo - High-Altitude Rocket</h2>
+                <p class="project-subtitle">Boston University Rocket Propulsion Group (BURPG)</p>
+            </div>
+            <div class="project-duration">2025.4 - Present</div>
         </div>
 
-        <!-- Simple Video Link -->
         <div class="media-container">
-            <a href="https://vimeo.com/123456789" target="_blank">
-                🎬 Click to watch demo video
-            </a>
-        </div>
-                 <p>
-                 I worked on electronic hardware, Close-loop controller, signal processing, and haptic & GUI(Graphical User Interfaces) for a soft robot, designed for minimally invasive surgery (MIS), with Prof. Ranzani and PhD Candidate Leonardo Zamora at Morphable Biorobotics Lab. 
-                     1. Designed an 8 channels real-time data acquisition system with customized PCB, BLDC motor driver and ROS2 firmware 
-2. Designed a 6 DOF(Degrees of Freedom), 7mm diameter, high precision (±5mN) biocompatible force sensor using magnetometers with customized PCB, calibrated it using Data-Driven Modeling with a FCNN(Fully Convolutional Neural Network)
-3. Implemented a 3-camera position and trajectory tracking system 
-4. Collaborated with Leonardo and Shresth, implemented inverse kinematic model and used the force and position feedback to enable close-loop control for the robot. Contributing to a journal paper currently in preparation.
-                 </p>
-    </section>
-
-     <section class="project">
-        <h2>🚀 Project Two</h2>
-        
-        <!-- Multiple Images -->
-        <div class="media-container">
-            <img src="images/project2-1.jpg" alt="Project 2 View 1" width="400">
-            <img src="images/project2-2.jpg" alt="Project 2 View 2" width="400">
+            <img src="FCREV1.png" alt="Flight Computer Design" width="400">
+            <img src="FCREV1_dES.png" alt="PCB Layout" width="400">
+            <p><em>Flight Computer PCB Design & Layout</em></p>
         </div>
 
-        <!-- Simple Video Link -->
-        <div class="media-container">
-            <a href="https://vimeo.com/123456789" target="_blank">
-                🎬 Click to watch demo video
-            </a>
-        </div>
-        <p>
-             
-                 </p>
-    </section>
-     <section class="project">
-        <h2>🚀 Project Two</h2>
-        
-        <!-- Multiple Images -->
-        <div class="media-container">
-            <img src="images/project2-1.jpg" alt="Project 2 View 1" width="400">
-            <img src="images/project2-2.jpg" alt="Project 2 View 2" width="400">
+        <h3>🎯 Project Overview</h3>
+        <p>Flagship high-altitude vehicle designed to reach <strong>100,000 ft</strong> with innovative closed-loop controlled COPV system for real-time propellant tank pressure regulation.</p>
+
+        <h3>👨‍💼 My Role: Engineering Leader & Avionics Team Lead</h3>
+        <div class="responsibilities-grid">
+            <div class="responsibility-card">
+                <strong>Avionics Architecture</strong> - Complete system design
+            </div>
+            <div class="responsibility-card">
+                <strong>Flight Computer</strong> - 4-layer PCB design
+            </div>
+            <div class="responsibility-card">
+                <strong>Power Systems</strong> - BMS & protection circuits
+            </div>
+            <div class="responsibility-card">
+                <strong>Communication</strong> - Ethernet, CAN bus, interfaces
+            </div>
         </div>
 
-        <!-- Simple Video Link -->
-        <div class="media-container">
-            <a href="https://vimeo.com/123456789" target="_blank">
-                🎬 Click to watch demo video
-            </a>
+        <h3>🛠️ Technical Specifications</h3>
+        <div class="tech-stack">
+            <span class="tech-tag">STM32H743</span>
+            <span class="tech-tag">4-Layer PCB</span>
+            <span class="tech-tag">BMS</span>
+            <span class="tech-tag">Efuse Protection</span>
+            <span class="tech-tag">Ethernet Switch</span>
+            <span class="tech-tag">Load Switches</span>
+            <span class="tech-tag">Delta-Sigma ADC</span>
+            <span class="tech-tag">CAN Bus</span>
+            <span class="tech-tag">IMU</span>
+            <span class="tech-tag">Altimeter</span>
         </div>
     </section>
-    
+
+    <!-- Daedalus Controller -->
+    <section class="project">
+        <div class="project-header">
+            <div>
+                <h2 class="project-title">🎛️ Daedalus Ground Support Controller</h2>
+                <p class="project-subtitle">Boston University Rocket Propulsion Group</p>
+            </div>
+            <div class="project-duration">2023.11 - 2025.2</div>
+        </div>
+
+        <div class="media-container">
+            <img src="DLrev2_testing.jpg" alt="Controller Testing" width="400">
+            <img src="GSE.JPG" alt="Ground Support Equipment" width="400">
+            <p><em>Controller Testing & Ground Support System</em></p>
+        </div>
+
+        <h3>🔧 Full-Stack Development Ownership</h3>
+        <div class="responsibilities-grid">
+            <div class="responsibility-card">
+                <strong>Circuit Simulation</strong> - LTspice/PSpice
+            </div>
+            <div class="responsibility-card">
+                <strong>Schematic Capture</strong> - Altium Designer
+            </div>
+            <div class="responsibility-card">
+                <strong>PCB Layout</strong> - 4-layer design
+            </div>
+            <div class="responsibility-card">
+                <strong>Design Reviews</strong> - Formal validation
+            </div>
+            <div class="responsibility-card">
+                <strong>Firmware Integration</strong> - System control
+            </div>
+            <div class="responsibility-card">
+                <strong>GUI Development</strong> - Operational interface
+            </div>
+        </div>
+
+        <h3>🎯 System Capabilities</h3>
+        <ul>
+            <li><strong>Propellant Loading</strong> - Precise control systems</li>
+            <li><strong>Data Acquisition</strong> - Real-time telemetry</li>
+            <li><strong>Engine Ignition</strong> - Controlled sequences</li>
+            <li><strong>Valve Control</strong> - Vehicle main valve operations</li>
+        </ul>
+    </section>
+
+    <!-- Surgical Robot Research -->
+    <section class="project">
+        <div class="project-header">
+            <div>
+                <h2 class="project-title">🤖 Surgical Robot Research</h2>
+                <p class="project-subtitle">Morphable Biorobotics Lab, Boston University</p>
+            </div>
+            <div class="project-duration">Ongoing Research</div>
+        </div>
+
+        <div class="media-container">
+            <img src="SRfigure.png" alt="Surgical Robot Design" width="400">
+            <img src="Tracking.png" alt="Tracking System" width="400">
+            <p><em>Soft Robot Design & Tracking System</em></p>
+        </div>
+
+        <h3>🔬 Research Focus</h3>
+        <p>Developing soft robots for minimally invasive surgery (MIS) with Prof. Ranzani and PhD Candidate Leonardo Zamora.</p>
+
+        <h3>🔧 Technical Contributions</h3>
+        <div class="responsibilities-grid">
+            <div class="responsibility-card">
+                <strong>Data Acquisition</strong> - 8-channel real-time system
+            </div>
+            <div class="responsibility-card">
+                <strong>Force Sensor</strong> - 6 DOF, ±5mN precision
+            </div>
+            <div class="responsibility-card">
+                <strong>Tracking System</strong> - 3-camera position tracking
+            </div>
+            <div class="responsibility-card">
+                <strong>Control Systems</strong> - Inverse kinematics & closed-loop
+            </div>
+        </div>
+
+        <h3>🛠️ Technical Stack</h3>
+        <div class="tech-stack">
+            <span class="tech-tag">Custom PCB Design</span>
+            <span class="tech-tag">BLDC Motor Drivers</span>
+            <span class="tech-tag">ROS2</span>
+            <span class="tech-tag">Magnetometers</span>
+            <span class="tech-tag">FCNN Modeling</span>
+            <span class="tech-tag">Data-Driven Calibration</span>
+            <span class="tech-tag">Inverse Kinematics</span>
+        </div>
+
+        <div style="background: #d4edda; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #28a745;">
+            <strong>📄 Publication:</strong> Contributing to journal paper currently in preparation
+        </div>
+    </section>
 </body>
 </html>
