@@ -18,6 +18,20 @@
             margin: 20px 0;
             border-radius: 8px;
         }
+        .media-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        video {
+            max-width: 100%;
+            border-radius: 8px;
+        }
         a {
             color: #0366d6;
             text-decoration: none;
@@ -34,20 +48,48 @@
     </header>
 
     <section class="project">
-        <h2>🚀 My Projects</h2>
-        <div class="project-item">
-            <h3>Project One</h3>
-            <p>Description of your first project.</p>
-            <a href="#">View Demo</a> | 
-            <a href="https://github.com/PercyChen451">View Video</a>
+        <h2>🚀 Project One</h2>
+        
+        <!-- Image Example -->
+        <div class="media-container">
+            <h3>📸 Project Screenshot</h3>
+            <img src="images/project1-screenshot.jpg" alt="Project 1 Screenshot" width="600">
+            <p><em>Caption explaining the image</em></p>
         </div>
-        <!-- Add more projects here -->
+
+        <!-- Video Example -->
+        <div class="media-container">
+            <h3>🎥 Project Demo Video</h3>
+            <!-- YouTube Embed -->
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+            <p>Or <a href="https://youtube.com/watch?v=dQw4w9WgXcQ">watch on YouTube</a></p>
+        </div>
+
+        <p>Description of your project...</p>
+        <a href="#">View Live Demo</a> | 
+        <a href="https://github.com/PercyChen451">View Code</a>
     </section>
 
-    <footer>
-        <p>📫 Contact me: 
-            <a href="https://github.com/PercyChen451">GitHub</a>
-        </p>
-    </footer>
+    <section class="project">
+        <h2>🚀 Project Two</h2>
+        
+        <!-- Multiple Images -->
+        <div class="media-container">
+            <img src="images/project2-1.jpg" alt="Project 2 View 1" width="400">
+            <img src="images/project2-2.jpg" alt="Project 2 View 2" width="400">
+        </div>
+
+        <!-- Simple Video Link -->
+        <div class="media-container">
+            <a href="https://vimeo.com/123456789" target="_blank">
+                🎬 Click to watch demo video
+            </a>
+        </div>
+    </section>
 </body>
 </html>
